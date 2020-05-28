@@ -5,7 +5,8 @@ The interface shall take a list of tasks (defined in any order) as the input par
 The following code defines the necessary classes and provides an example of how the interface may be used.
 
 
-```javaimport java.util.ArrayList;
+```java
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
