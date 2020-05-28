@@ -5,8 +5,7 @@ The interface shall take a list of tasks (defined in any order) as the input par
 The following code defines the necessary classes and provides an example of how the interface may be used.
 
 
-```java
-import java.util.ArrayList;
+```javaimport java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -53,14 +52,14 @@ public class Main {
         /**
          * The following is the example of how the scheduler may be used
          */
-        List<Task> tasks = new ArrayList<>(Arrays.asList(
-            new Task("E", new ArrayList<>(Arrays.asList("B"))),
-            new Task("D", new ArrayList<>(Arrays.asList("A", "B"))),
-            new Task("A", new ArrayList<>(Arrays.asList())),
-            new Task("B", new ArrayList<>(Arrays.asList("A"))),
-            new Task("C", new ArrayList<>(Arrays.asList("D", "B"))),
-            new Task("F", new ArrayList<>(Arrays.asList("E")))
-        ));
+        List<Task> tasks = Arrays.asList(
+            new Task("E", Arrays.asList("B")),
+            new Task("D", Arrays.asList("A", "B")),
+            new Task("A", Arrays.asList()),
+            new Task("B", Arrays.asList("A")),
+            new Task("C", Arrays.asList("D", "B")),
+            new Task("F", Arrays.asList("E"))
+        );
 
         IScheduler scheduler = /* */;
         List<Task> sortedTasks = scheduler.schedule(tasks);
@@ -69,6 +68,7 @@ public class Main {
         }
     }
 }
+
 ```
 
 The output of the task shall be provided as a class implementing IScheduler interface.
